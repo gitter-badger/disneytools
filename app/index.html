@@ -32,6 +32,7 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/angular/angular.js"></script>
   <script src="/bower_components/angular-route/angular-route.js"></script>
   <script src="/bower_components/firebase/firebase.js"></script>
@@ -43,15 +44,18 @@
   <!---admin Disney tools components-->
   <script src="admin/admin.js"></script>
   <script src="admin/dashboard/dashboard.js"></script>
-  
+  <!-- Common Angular Utilities -->
+  <script src="/bower_components/common-angular-utilities/loading.js"></script>
+  <script src="/bower_components/common-angular-utilities/pubsub.js"></script>
+  <script src="/bower_components/common-angular-utilities/modal.js"></script>
+  <script src="/bower_components/common-angular-utilities/passive-messenger.js"></script>
+  <!-- Registration Components -->
   <script src="registration/registration.js"></script>
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
+  <script src="registration/registration.model.js"></script>
   <!-- REST Services -->
   <script src="registration/registration.rest.js"></script>
   <!-- Third Party Libraries -->
-  <script src="/bower_components/js-sha1/build/sha1.min.js"></script>  
+  <script src="/bower_components/js-sha1/build/sha1.min.js"></script>
   
 </body>
 </html>

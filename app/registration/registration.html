@@ -1,5 +1,10 @@
+<div class="loader" loading="rgs.loading">
+  <span class="loading"></span>
+  <p>Loading...</p>
+</div>
+
 <div class="container">
-  <div class="row" ng-controller="RegistrationCtrl as vm">
+  <div class="row">
   	<div class="col-md-6">
     
           <form class="form-horizontal" action="" method="POST">
@@ -10,7 +15,7 @@
             <div class="control-group">
               <label class="control-label" for="username">Username</label>
               <div class="controls">
-                <input type="text" id="username" name="username" ng-model="vm.username" placeholder="" class="form-control input-lg" required>
+                <input type="text" id="username" name="username" ng-model="rgs.username" placeholder="" class="form-control input-lg" required>
                 <p class="help-block">Username can contain any letters or numbers, without spaces</p>
               </div>
             </div>
@@ -18,7 +23,7 @@
             <div class="control-group">
               <label class="control-label" for="email">E-mail</label>
               <div class="controls">
-                <input type="email" id="email" name="email" ng-model="vm.email" placeholder="" class="form-control input-lg" required>
+                <input type="email" id="email" name="email" ng-model="rgs.email" placeholder="" class="form-control input-lg" required>
                 <p class="help-block">Please provide your E-mail</p>
               </div>
             </div>
@@ -26,7 +31,7 @@
             <div class="control-group">
               <label class="control-label" for="password">Password</label>
               <div class="controls">
-                <input type="password" id="password" name="password" ng-model="vm.password" placeholder="" class="form-control input-lg" required>
+                <input type="password" id="password" name="password" ng-model="rgs.password" placeholder="" class="form-control input-lg" required>
                 <p class="help-block">Password should be at least 6 characters</p>
               </div>
             </div>
@@ -34,7 +39,7 @@
             <div class="control-group">
               <label class="control-label" for="password_confirm">Password (Confirm)</label>
               <div class="controls">
-                <input type="password" id="password_confirm" name="password_confirm" ng-model="vm.password_confirm" placeholder="" class="form-control input-lg" required>
+                <input type="password" id="password_confirm" name="password_confirm" ng-model="rgs.password_confirm" placeholder="" class="form-control input-lg" required>
                 <p class="help-block">Please confirm password</p>
               </div>
             </div>
@@ -42,7 +47,7 @@
             <div class="control-group">
               <!-- Button -->
               <div class="controls">
-                <button class="btn btn-success" type="button" ng-click="vm.register();">Register</button>
+                <button class="btn btn-success" type="button" ng-click="rgs.register();">Register</button>
               </div>
             </div>
           </fieldset>
