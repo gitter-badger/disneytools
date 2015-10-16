@@ -19,13 +19,20 @@ function registration (RegistrationREST) {
   var vm = this;
   vm.register = register;
 
+  // TODO make more elegant
   function register () {
-    var call = RegistrationREST.authenticate();
-    call.then(function(data) {
-      console.log('authenticated');
-    }, function(err) {
-      console.error('Error authenticating to Firebase!');
-    });
+    var params = {
+      username: (!!vm.username) ? vm.username : '--unspecified--',
+      email: (!!vm.email) ? vm.email : '--unspecified--',
+      password: (!!vm.password) ? sha1(vm.password) : '--unspecified--',
+    }
 
+    var call = RegistrationREST.signup(params);
+
+    call.then(function() {
+      console.log('set was successful!');
+    }, function(err) {
+      console.error('error while setting:', err);
+    });
   }
 }

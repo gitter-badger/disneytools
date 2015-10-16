@@ -11,7 +11,7 @@
     ];
     
     function registrationRest($http, $q) {
-        var url = 'https://amber-torch-9068.firebaseio.com';
+        var url = 'https://amber-torch-9068.firebaseio.com/user';
         var firebase = new Firebase(url);
         Fireproof.bless($q);
         var fireproof = new Fireproof(firebase)
@@ -19,10 +19,14 @@
 
         // Firebase Authentication
         this.authenticate = function () {
-            return fireproof.auth(token);
+            // TODO
         }
 
         this.signup = function (params) {
+            return fireproof.set(params);
+        }
+        
+        this.get = function () {
             // TODO
         }
     }
