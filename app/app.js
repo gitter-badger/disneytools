@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.admin',
+  'myApp.dashboard',
   'myApp.registration',
   'myApp.version'
 ]).
