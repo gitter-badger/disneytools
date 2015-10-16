@@ -1,5 +1,5 @@
 /* app css stylesheet */
-
+@import url('css_modules/_dashboard.css');
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
