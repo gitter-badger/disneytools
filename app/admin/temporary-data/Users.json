@@ -1,0 +1,40 @@
+{
+  "user": [
+    {
+      "id": "001",
+      "firstname": "vergel",
+      "middlename": "noda",
+      "lastname": "barit",
+      "age": "26",
+      "position": "smallforward",
+      "image" : "http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg"
+    },
+    {
+      "id": "002",
+      "firstname": "christian",
+      "middlename": "",
+      "lastname": "Talampas",
+      "age": "30",
+      "position": "shootingguard",
+      "image" : "http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg"
+    },
+    {
+      "id": "002",
+      "firstname": "A",
+      "middlename": "",
+      "lastname": "C",
+      "age": "30",
+      "position": "shootingguard",
+      "image" : "http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg"
+    },
+    {
+      "id": "002",
+      "firstname": "D",
+      "middlename": "",
+      "lastname": "Dddd",
+      "age": "30",
+      "position": "shootingguard",
+      "image" : "http://placekitten.com.s3.amazonaws.com/homepage-samples/200/138.jpg"
+    }
+  ]
+}
