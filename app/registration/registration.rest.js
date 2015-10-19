@@ -11,22 +11,22 @@
     ];
     
     function registrationRest($http, $q) {
+        Fireproof.bless($q);
         var url = 'https://amber-torch-9068.firebaseio.com/user';
         var firebase = new Firebase(url);
-        Fireproof.bless($q);
         var fireproof = new Fireproof(firebase)
         var token = 'xsdUVYi0KpWTRkZHWorwapmGuItdrzY0boCeQyZv';
 
         // Firebase Authentication
-        this.authenticate = function () {
+        this.authenticate = function() {
             // TODO
         }
 
-        this.signup = function (params) {
-            return fireproof.set(params);
+        this.create = function(params) {
+            return fireproof.push(params);
         }
         
-        this.get = function () {
+        this.get = function() {
             // TODO
         }
     }

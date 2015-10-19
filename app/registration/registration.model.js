@@ -7,15 +7,29 @@
         
     registrationModel.$inject = [
         'loading',
+        'RegistrationREST',
     ];
     
-    function registrationModel (loading) {
-        function registration () {
-            // this.isLoading = loading.new();
+    function registrationModel(loading, RegistrationREST) {
+        function Registration() {
+            this.isLoading = loading.new();
         }
         
-        registration.loading = loading.new();
+        Registration.loading = loading.new();
+        Registration.sync = sync;
         
-        return registration;
+        function sync(params) {
+            var self = this;
+            var call = RegistrationREST.create(params);
+            this.loading.watch(
+              call.then(function() {
+                console.log('set was successful!');
+              }, function(err) {
+                console.error('error while setting:', err);
+              })
+            );
+            return call;
+        }
+        return Registration;
     }
 })(window.angular);
