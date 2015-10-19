@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.admin',
   'myApp.dashboard',
   'myApp.registration',
+  'myApp.dashboard'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/admin'});
