@@ -12,7 +12,7 @@
     
     function registrationRest($http, $q) {
         Fireproof.bless($q);
-        var url = 'https://amber-torch-9068.firebaseio.com/user';
+        var url = 'https://amber-torch-9068.firebaseio.com/registrants';
         var firebase = new Firebase(url);
         var fireproof = new Fireproof(firebase)
         var token = 'xsdUVYi0KpWTRkZHWorwapmGuItdrzY0boCeQyZv';

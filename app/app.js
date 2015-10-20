@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'cs.loading',
+  'cs.passive-messenger',
   'myApp.admin',
   'myApp.dashboard',
   'myApp.registration',

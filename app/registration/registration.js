@@ -17,7 +17,6 @@ registration.$inject = [
 ];
 
 function registration(Registration) {
-  console.log(Registration);
   var rgs = this;
   rgs.model = Registration.model; // This line links this controller to the Registration model
   rgs.register = register;
