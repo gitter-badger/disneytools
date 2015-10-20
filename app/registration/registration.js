@@ -17,17 +17,13 @@ registration.$inject = [
 ];
 
 function registration(Registration) {
+  console.log(Registration);
   var rgs = this;
+  rgs.model = Registration.model; // This line links this controller to the Registration model
   rgs.register = register;
   rgs.loading = Registration.loading;
 
-  // TODO make more elegant
   function register() {
-    var params = {
-      username: (!!rgs.username) ? rgs.username : '--unspecified--',
-      email: (!!rgs.email) ? rgs.email : '--unspecified--',
-      password: (!!rgs.password) ? sha1(rgs.password) : '--unspecified--',
-    }
-    console.log(Registration.sync(params));
+    Registration.sync();
   }
 }

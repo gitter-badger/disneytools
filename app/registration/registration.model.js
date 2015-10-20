@@ -3,7 +3,7 @@
     
     angular
         .module('myApp.registration')
-        .factory('RegistrationModel', registrationModel);
+        .service('RegistrationModel', registrationModel);
         
     registrationModel.$inject = [
         'loading',
@@ -11,15 +11,18 @@
     ];
     
     function registrationModel(loading, RegistrationREST) {
-        function Registration() {
-            this.isLoading = loading.new();
-        }
         
-        Registration.loading = loading.new();
-        Registration.sync = sync;
+        this.model = {};
+        this.loading = loading.new();
+        this.sync = sync;
         
-        function sync(params) {
+        function sync() {
             var self = this;
+            var params = {
+              username: (!!self.model.username) ? self.model.username : '--unspecified--',
+              email: (!!self.model.email) ? self.model.email : '--unspecified--',
+              password: (!!self.model.password) ? sha1(self.model.password) : '--unspecified--',
+            }
             var call = RegistrationREST.create(params);
             this.loading.watch(
               call.then(function() {
@@ -30,6 +33,5 @@
             );
             return call;
         }
-        return Registration;
     }
 })(window.angular);
