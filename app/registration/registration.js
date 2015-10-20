@@ -27,7 +27,7 @@ function registration(Registration) {
       username: (!!rgs.username) ? rgs.username : '--unspecified--',
       email: (!!rgs.email) ? rgs.email : '--unspecified--',
       password: (!!rgs.password) ? sha1(rgs.password) : '--unspecified--',
-    }
-    console.log(Registration.sync(params));
+    };
+    Registration.sync(params);
   }
 }
