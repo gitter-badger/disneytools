@@ -1,5 +1,7 @@
 # angular-seed — the seed for AngularJS apps
 
+[![Join the chat at https://gitter.im/helios1989/disneytools](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/helios1989/disneytools?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This project is an application skeleton for a typical [AngularJS](http://angularjs.org/) web app.
 You can use it to quickly bootstrap your angular webapp projects and dev environment for these
 projects.
